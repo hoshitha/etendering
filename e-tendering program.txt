@@ -1,0 +1,65 @@
+pragma solidity ^0.4.19;
+contract etender{
+    string company;
+    string cpassword1;
+    string cpassword2;
+    string user;
+    string upassword1;
+    string upassword2;
+    string time;
+    string date;
+    string projname;
+    string a;
+    string b;
+    int d;
+    int m;
+    int y;
+    int min;
+    int h;
+    int s;
+    int[10] budget;
+    string[10] companylist;
+    string[10] companypass;
+    string[10] userlist;
+    string[10] userpass;
+    function compcreateacc(string _company,string _cpass1,string _cpass2){
+        company=_company;
+        cpassword1=_cpass1;
+        cpassword2=_cpass2;
+    if(keccak256(cpassword1)==keccak256(cpassword2)){
+        companylist[1]=company;
+        companypass[1]=cpassword1;
+    }
+    }
+    function usercreateacc(string _user,string _upass1,string _upass2){
+        user=_user;
+        upassword1=_upass1;
+        upassword2=_upass2;
+    if(keccak256(upassword1)==keccak256(upassword2)){
+        userlist[1]=user;
+        userpass[1]=upassword1;
+    }
+    }
+    function clogin(string _company,string _password){
+        a=_company;
+        b=_password;
+    if((keccak256(a)==keccak256(companylist[1]))&&(keccak256(b)==keccak256(companypass[1]))){
+    
+    }}
+    function setdate(int _d,int _m,int _y){
+        d=_d;
+        m=-m;
+        y=_y;
+    }
+    function settime(int _hour,int _min,int _sec){
+        h=_hour;
+        min=_min;
+        s=_sec;
+    }
+    function setprojname(string _projname){
+        projname=_projname;
+    }
+    function ulogin(int _budget){
+        budget[1]=_budget;
+    }
+    }
